@@ -2,28 +2,47 @@
 import EmojiField from "@/components/EmojiField.vue";
 import ArrowCircleRight from "@/assets/icons/arrow-circle-right.svg";
 import type Emoji from "@/types/Emoji";
-import { ref, computed } from "vue";
+import type Entry from "@/types/Entry";
+import { ref, computed, defineEmits } from "vue";
 
-const text = ref("");
+// data
+const body = ref("");
 const emoji = ref<Emoji | null>(null);
-const charCount = computed(() => text.value.length);
+const charCount = computed(() => body.value.length);
 const maxChars = 280;
 
+// events
+defineEmits<{
+  (e: "create", entry: Entry): void;
+}>();
+
+// methods
 const handleTextInput = (e: Event) => {
   const textarea = e.target as HTMLTextAreaElement;
 
   if (textarea.value.length <= maxChars) {
-    text.value = textarea.value;
+    body.value = textarea.value;
   } else {
-    text.value = textarea.value = textarea.value.substring(0, maxChars);
+    body.value = textarea.value = textarea.value.substring(0, maxChars);
   }
 };
 </script>
 
 <template>
-  <form class="entry-form" @submit.prevent>
+  <form
+    class="entry-form"
+    @submit.prevent="
+      $emit('create', {
+        body: body,
+        emoji,
+        createdAt: new Date(),
+        userId: 1,
+        id: Math.random(),
+      })
+    "
+  >
     <textarea
-      :value="text"
+      :value="body"
       @keyup="handleTextInput"
       placeholder="New Journal Entry for danielkelly_io"
     ></textarea>
