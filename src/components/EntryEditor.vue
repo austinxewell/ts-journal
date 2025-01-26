@@ -2,6 +2,7 @@
 import EmojiField from "@/components/EmojiField.vue";
 import ArrowCircleRight from "@/assets/icons/arrow-circle-right.svg";
 </script>
+
 <template>
   <form class="entry-form" @submit.prevent>
     <textarea placeholder="New Journal Entry for danielkelly_io"></textarea>
