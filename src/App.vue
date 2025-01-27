@@ -10,7 +10,7 @@ import { userInjectionKey } from "./injectionKeys";
 const entries: Entry[] = reactive([]);
 const user: User = reactive({
   id: 1,
-  username: "danielkeylly_io",
+  username: "austinxewell",
   settings: [],
 });
 
