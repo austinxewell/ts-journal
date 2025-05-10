@@ -1,6 +1,6 @@
 # TypeScript Journal
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1f0c0fa9-b2f1-4de0-9863-c0c0221a5ab1/deploy-status)](https://app.netlify.com/sites/ts-journal/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f6ebcff7-6791-49e7-b4df-01b3e9224a2f/deploy-status)](https://app.netlify.com/sites/ts-journal/deploys)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?style=flat-square&logo=typescript)
 ![Vue 3](https://img.shields.io/badge/Vue-3.x-42b883?style=flat-square&logo=vue.js&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-7f7f7f?style=flat-square&logo=sass&logoColor=white)
